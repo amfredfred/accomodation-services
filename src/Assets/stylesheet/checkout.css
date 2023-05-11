@@ -8,38 +8,7 @@
     font-family: 'Montserrat', sans-serif
 }
 
-body {
-    background-color: #b064f7;
-    line-height: 1rem;
-    font-size: 14px;
-    padding: 10px
-}
 
-.container {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: #eee
-}
-
-.navbar-brand {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 800
-}
-
-nav {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: white
-}
-
-.order .card {
-    position: relative;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .1)
-}
 
 .ribbon {
     width: 150px;
@@ -101,6 +70,10 @@ small {
     font-size: 12px
 }
 
+.d-flex {
+    width: max-content !important;
+}
+
 .cart {
     line-height: 1
 }
@@ -127,7 +100,12 @@ td {
 
 .red {
     color: #fd1c1c;
-    font-weight: 600
+    font-weight: 400
+}
+
+.green {
+    color: #1cfd33;
+    font-weight: 400
 }
 
 .b-bottom {
@@ -135,18 +113,26 @@ td {
     padding-bottom: 20px
 }
 
+.border-bottom {
+    border-bottom: 1px dashed #3c3c3c9e !important;
+}
+
+.border-bottom:nth-last-of-type() {
+    border-bottom-color: transparent !important;
+}
+
+.table.table-borderless {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 p {
     margin: 0px
 }
 
-table input {
-    width: 40px;
-    border: 1px solid #eee
-}
-
-input:focus {
-    border: 1px solid #eee;
-    outline: none
+.standard-helperText {
+    width: 100% !important;
+    color: white !important
 }
 
 .round {
@@ -159,6 +145,10 @@ input:focus {
     justify-content: center
 }
 
+.card {
+    background: var(--body-background-color) !important;
+}
+
 .payment-summary .unregistered {
     width: 100%;
     display: flex;
@@ -166,13 +156,10 @@ input:focus {
     justify-content: center;
     background-color: #eee;
     text-transform: uppercase;
-    font-size: 14px
+    font-size: 14px;
 }
 
-.payment-summary input {
-    width: 100%;
-    margin-right: 20px
-}
+
 
 .payment-summary .sale {
     width: 100%;
@@ -195,9 +182,6 @@ input:focus {
     object-fit: cover
 }
 
-.delivery .card {
-    padding: 10px 5px
-}
 
 .option {
     position: relative;
@@ -207,9 +191,7 @@ input:focus {
     color: #888
 }
 
-.option input {
-    display: none
-}
+
 
 .checkmark {
     position: absolute;
@@ -222,9 +204,7 @@ input:focus {
     border-radius: 50%
 }
 
-.option input:checked~.checkmark:after {
-    display: block
-}
+
 
 .option .checkmark:after {
     content: "\2713";
@@ -238,17 +218,11 @@ input:focus {
     transition: 200ms ease-in-out 0s
 }
 
-.option:hover input[type="radio"]~.checkmark {
-    background-color: #f4f4f4
+
+.row {
+    padding: 0 !important;
 }
 
-.option input[type="radio"]:checked~.checkmark {
-    background: #ac1f32;
-    color: #fff;
-    transition: 300ms ease-in-out 0s
-}
-
-.option input[type="radio"]:checked~.checkmark:after {
-    transform: translate(-50%, -50%) scale(1);
-    color: #fff
+@media (max-width:600px) {
+    
 }

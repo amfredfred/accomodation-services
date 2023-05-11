@@ -1,6 +1,6 @@
 import { useLocalStorage } from "usehooks-ts"
 import { AccomodationServices, IAccomodationServices, IRoom } from "../../../Constants/Interfaces"
-import { Close, Shop2, KeyboardArrowDown, KeyboardArrowUp, Edit, DeleteForever, ArrowRight } from "@mui/icons-material"
+import { Close, Shop2, KeyboardArrowDown, KeyboardArrowUp, ArrowLeft, DeleteForever, ArrowRight, Money, CurrencyExchange } from "@mui/icons-material"
 import { motion } from 'framer-motion'
 import * as React from 'react';
 import {
@@ -137,56 +137,30 @@ export default function Cart() {
         );
     }
 
-    const Cart = (
-        <div className="cart-main">
-            <div className="space-between" style={{ paddingInline: '1rem' }}>
-                <h3>Cart &bull;&nbsp;<span>{app?.cart?.selections?.length}Item`s`</span></h3>
-                <Close onClick={toggleCart} />
-            </div>
-            <div className="cart-contents">
-                <TableContainer component={Paper} style={{ background: 'transparent' }}>
-                    <Table aria-label="collapsible table">
-                        <TableHead>
-                            <TableRow >
-                                <TableCell />
-                                <TableCell className="link-color">Room ID</TableCell>
-                                <TableCell className="link-color" align="center">Check&nbsp;In</TableCell>
-                                <TableCell className="link-color" align="center">Check&nbsp;Out</TableCell>
-                                <TableCell className="link-color" align="center">Price/Term</TableCell>
-                                <TableCell className="link-color" align="center">Sub. T</TableCell>
-                                <TableCell className="link-color" align="center">Available</TableCell>
-                                <TableCell className="link-color" align="right">Actions</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {
-                                app?.cart?.selections?.map((room: IRoom, index: number) => <Row key={room?.id?.concat('-' + index)} row={room} />)
-                            }
-                            <TableRow style={{ borderRadius: 40, marginTop: 15, background: 'var(--box-background-color)' }}>
-                                <TableCell className="link-color no-border " />
-                                <TableCell className="link-color no-border " />
-                                <TableCell className="link-color no-border " />
-                                <TableCell className="link-color no-border " />
-                                <TableCell className="link-color no-border " />
-                                <TableCell className="link-color no-border " />
-                                <TableCell className="link-color no-border " align="right">${sum(app?.cart?.selections?.map((sub: IRoom) => Number(sub?.subTotal)))}</TableCell>
-                                <TableCell className="link-color no-border " align="center" >Total</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+    const Cart =
+        <TableContainer component={Paper} style={{ background: 'transparent' }}>
+            <Table aria-label="collapsible table">
+                <TableHead>
+                    <TableRow >
+                        <TableCell />
+                        <TableCell className="link-color">Room ID</TableCell>
+                        <TableCell className="link-color" align="center">Check&nbsp;In</TableCell>
+                        <TableCell className="link-color" align="center">Check&nbsp;Out</TableCell>
+                        <TableCell className="link-color" align="center">Price/Term</TableCell>
+                        <TableCell className="link-color" align="center">Sub. T</TableCell>
+                        <TableCell className="link-color" align="center">Available</TableCell>
+                        <TableCell className="link-color" align="right">Actions</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {
+                        app?.cart?.selections?.map((room: IRoom, index: number) =>
+                            <Row key={room?.id?.concat('-' + index)} row={room} />)
+                    }
+                </TableBody>
+            </Table>
+        </TableContainer>
 
-                <div className="space-between" style={{ width: '100%' }}>
-                    <FormControlLabel
-                        className="primary-button"
-                        control={<ArrowRight />}
-                        onClick={checkout}
-                        label='Proceed To Checkout'
-                    />
-                </div>
-            </div>
-        </div>
-    )
 
     return (
         <motion.div
@@ -194,7 +168,28 @@ export default function Cart() {
             animate={{ top: '50%' }}
             exit={{ top: '-100%' }}
             className="cart-wrapper">
-            {app?.cart?.isCheckingout ? <Checkout /> : Cart}
+            <div className="cart-main">
+                <div className="space-between cart-header" style={{ paddingInline: '1rem' }}>
+                    <h3>{app?.cart?.isCheckingout ? 'Checkout' : "Cart"} </h3>
+                    {/*  &bull;&nbsp;<span>{app?.cart?.selections?.length}Item`s`</span> */}
+                    <Close onClick={toggleCart} />
+                </div>
+                <div className="cart-contents">
+                    {app?.cart?.isCheckingout ? <Checkout /> : Cart}
+                </div>
+                <div className="space-between" style={{ width: '100%', padding: 10, paddingTop: 0 }}>
+                    <FormControlLabel
+                        className="primary-button"
+                        control={app?.cart?.isCheckingout ? <ArrowLeft /> : <ArrowRight />}
+                        onClick={checkout}
+                        label={app?.cart?.isCheckingout ? 'Back To Cart' : 'Checkout'}
+                    />
+                    <div className="space-between">
+                        <span>Total </span>
+                        <span>${fmtNumCompact(sum(app?.cart?.selections?.map((sub: IRoom) => Number(sub?.subTotal))))}</span>
+                    </div>
+                </div>
+            </div>
         </motion.div>
     )
 

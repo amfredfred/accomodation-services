@@ -39,14 +39,15 @@ export const timeLocalDate = (time: Date | string | number) => {
         _validity.slice(8, 10) // Day
             .concat(_validity.slice(4, 8)) //8 // Month
             .concat(_validity.slice(0, 4)) //Year
-    // .concat(', ')
-    // .concat(_validity.slice(12, 19))
+    .concat(', ')
+    .concat(_validity.slice(12, 19))
     return _month_day_time
 }
 
 export const sumCosts = (from: any, to: any, price: any) => {
     let subT = sub(new Date(from).getTime(), new Date(to as any).getTime())
-    const subTotal = mul(Math.ceil(div(subT, (1000 * 3600 * 24))), price)
+    subT = Math.ceil(div(subT, (1000 * 3600 * 24)))
+    const subTotal = mul(subT, price)
     return { subTotal, subT }
 }
 

@@ -2,7 +2,7 @@ import { IRoom } from "../../../Constants/Interfaces";
 import { useWindowSize } from 'usehooks-ts'
 import { FormControlLabel, Button, Tooltip,Rating } from '@mui/material'
 import {
-    Photo, Wifi, Abc, Settings,
+    Photo, Wifi, 
     Drafts,
     Atm,
     Restaurant,
