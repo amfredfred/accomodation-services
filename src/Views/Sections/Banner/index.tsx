@@ -34,7 +34,7 @@ export default function BannerArea() {
                     loop
                 >
                     {
-                        _dummy_?.map((room: IRoom) => <SwiperSlide>
+                        _dummy_?.map((room: IRoom) => <SwiperSlide key={room?.id}>
                             <div className="banner-bg-slide" >
                                 <div className="banner-bg-image-wrapper">
                                     <img src={room?.photos?.[0]} className="background-cover" />
