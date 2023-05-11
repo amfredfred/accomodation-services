@@ -82,6 +82,8 @@ export default function Booking() {
                 Greetings! You will be residing in {'__LOCATION__'} for a brief period of time.
                 <br />It is vital that your accommodations become a comfortable and welcoming abode for you.
             </p>
+            <br />
+            <br />
             <div className="booking-section">
                 <Swiper
                     loop
@@ -130,7 +132,9 @@ export default function Booking() {
                             </div>
                         </div>
                         <p className="sub-headline capitalize">{activeRoom?.type}</p>
+                        <br />
                         <p className="paragraph">{activeRoom?.description}</p>
+                        <br />
                         <div className="space-between">
                             <div className="space-between">
                                 {activeRoom?.features?.wifi && <Tooltip placement='top' title='Free Wifi'><Wifi className='feature-icon' /></Tooltip>}

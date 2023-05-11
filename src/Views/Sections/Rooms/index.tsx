@@ -18,6 +18,8 @@ export default function Rooms() {
                 Our accommodations offer an exceptional staycation experience.
                 <br />Select your preferred room and begin your staycation!
             </p>
+            <br />
+            <br />
             <Swiper
                 slidesPerView={width > 1000 ? 3.6 : width <= 999 && width > 860 ? 3 : width <= 860 && width > 680 ? 2 : 1}
                 className="rooms-slide-contaner"

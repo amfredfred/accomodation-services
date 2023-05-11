@@ -3,6 +3,14 @@ import BGSlideTwo from '../Assets/images/bg-slider-2.jpg'
 import BGSlideThree from '../Assets/images/florian-giorgio-mbB_e6M1Zso-unsplash.jpg'
 import BGSlideFour from '../Assets/images/exterior.jpg'
 import BGSlideFive from '../Assets/images/gallery-about-1.png'
+import BGSlideSix from '../Assets/images/aprtment-one.webp'
+import BGSlideSeven from '../Assets/images/hotel-one.webp'
+import BGSlideEight from '../Assets/images/motel-port.webp'
+import BGSlideNine from '../Assets/images/aprtment-one.webp'
+import BGSlideTen from '../Assets/images/vista.webp'
+import BGSlideEleven from '../Assets/images/new-aprtment.webp'
+
+
 
 export const rooms = [
     {
@@ -10,7 +18,7 @@ export const rooms = [
         id: 'ROOM_0',
         type: 'holiday and vacation',
         description: 'It is a long established fact that a reader will be distracted.',
-        photos: [BGSlideOne, BGSlideThree, BGSlideTwo],
+        photos: [BGSlideSix, BGSlideOne, BGSlideTwo],
         avaiability: {},
         price: '672',
         term: 'night',
@@ -28,7 +36,7 @@ export const rooms = [
         id: 'ROOM_1',
         type: 'vacation',
         description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        photos: [BGSlideTwo],
+        photos: [BGSlideSeven, BGSlideTwo],
         avaiability: {},
         price: '2342',
         term: 'night',
@@ -44,8 +52,8 @@ export const rooms = [
         title: 'delux room',
         id: 'ROOM_2',
         type: 'holiday hotel vacation',
-        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        photos: [BGSlideThree],
+        description: ' It combines the peace and quiet of the Maldives with seven top-notch restaurants, a wide range of recreational activities, and exotic spa and wellness facilities. ',
+        photos: [BGSlideEight, BGSlideThree, BGSlideTen],
         avaiability: {},
         price: '23321',
         term: 'night',
@@ -60,8 +68,8 @@ export const rooms = [
         title: 'delux room',
         id: 'ROOM_3',
         type: 'holiday hotel vacation',
-        description: 'Experience a dreamy island getaway in the remote Maldives refuge of JA Manafaru. A tropical private paradise can be found in the crystal-clear waters of the Indian Ocean. It combines the peace and quiet of the Maldives with seven top-notch restaurants, a wide range of recreational activities, and exotic spa and wellness facilities. Magical moments are documented, and romance comes to life against a gorgeous landscape.',
-        photos: [BGSlideFour],
+        description: 'Experience a dreamy island getaway in the remote Maldives refuge of JA Manafaru. A tropical private paradise can be found in the crystal-clear waters of the Indian Ocean.',
+        photos: [BGSlideEleven, BGSlideNine, BGSlideFour],
         avaiability: {},
         price: '674',
         term: 'night',
@@ -79,7 +87,7 @@ export const rooms = [
         title: 'delux room',
         id: 'ROOM_4',
         type: 'holiday hotel vacation',
-        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        description: 'Magical moments are documented, and romance comes to life against a gorgeous landscape.',
         photos: [BGSlideFive, BGSlideTwo, BGSlideFour],
         avaiability: {},
         price: '231',
@@ -95,7 +103,7 @@ export const rooms = [
         id: 'ROOM_5',
         type: 'holiday hotel vacation',
         description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        photos: [BGSlideTwo, BGSlideFive, BGSlideFour],
+        photos: [BGSlideSeven, BGSlideFive, BGSlideFour],
         avaiability: {},
         price: '1231',
         term: 'night',

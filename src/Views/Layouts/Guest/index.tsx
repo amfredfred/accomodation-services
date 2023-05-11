@@ -12,7 +12,7 @@ export default function GuestLayout(props: ILayouts) {
                 <div className="scroll-pattern">
                     <Heading />
                     <div className="contents">{children}</div>
-                    <Footing />
+                    {/* <Footing /> */}
                 </div>
             </div>
         </div >

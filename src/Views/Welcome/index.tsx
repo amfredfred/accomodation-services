@@ -9,7 +9,7 @@ export default function Welcome() {
             <BannerArea />
             <Rooms />
             <Booking />
-            <AboutUs />
+            {/* <AboutUs /> */}
         </div>
     )
 }
