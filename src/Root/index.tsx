@@ -27,7 +27,10 @@ export default function Root() {
 
     return (
         <BrowserRouter>
-            {app?.user?.isAuthenticated ? Authenticated : Guest}
+            {/* {app?.user?.isAuthenticated ? Authenticated : Guest} */}
+            <GuestLayout>
+                <Welcome />
+            </GuestLayout>
             <Cart />
         </BrowserRouter >
     )

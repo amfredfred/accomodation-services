@@ -1,7 +1,7 @@
 import { ILayouts } from "../../../Constants/Interfaces";
-import Footing from "../Patials/Footing";
+// import Footing from "../Patials/Footing";
 import Heading from "../Patials/Heading";
-import Navigation from "../Patials/Navigation";
+// import Navigation from "../Patials/Navigation";
 
 export default function GuestLayout(props: ILayouts) {
     const { children } = props
@@ -12,9 +12,9 @@ export default function GuestLayout(props: ILayouts) {
                 <div className="scroll-pattern">
                     <Heading />
                     <div className="contents">
-                        {children} HEY FRED
+                        {children}
                     </div>
-                    <Footing />
+                    {/* <Footing /> */}
                 </div>
             </div>
         </div >
