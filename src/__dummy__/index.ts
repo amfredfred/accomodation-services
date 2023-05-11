@@ -7,60 +7,102 @@ import BGSlideFive from '../Assets/images/gallery-about-1.png'
 export const rooms = [
     {
         title: 'queen room',
+        id: 'ROOM_0',
         type: 'holiday and vacation',
         description: 'It is a long established fact that a reader will be distracted.',
         photos: [BGSlideOne, BGSlideThree, BGSlideTwo],
         avaiability: {},
         price: '672',
         term: 'night',
+        rating: [2, 3, 4, 1, 5, 1, 3, 4, 5, 5, 5],
         features: {
-
-        }
+            wifi: true,
+            atmMachine: true,
+            restaurant: true,
+            spar: true,
+        },
+        bookedTill: 1685700000000
     },
     {
         title: 'browood room',
+        id: 'ROOM_1',
         type: 'vacation',
         description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
         photos: [BGSlideTwo],
         avaiability: {},
-        price: '234',
+        price: '2342',
         term: 'night',
+        rating: [2, 3, 4, 1, 5, 1, 3, 1, 4, 5],
         features: {
-
-        }
+            atmMachine: true,
+            restaurant: true,
+            swimmingPool: true,
+        },
+        bookedTill: 1683576778932
     },
     {
         title: 'delux room',
+        id: 'ROOM_2',
         type: 'holiday hotel vacation',
         description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
         photos: [BGSlideThree],
         avaiability: {},
-        price: '231',
+        price: '23321',
         term: 'night',
+        rating: [2, 3, 4, 4, 4, 2, 1, 0, 1, 1,],
         features: {
-
-        }
+            wifi: true,
+            swimmingPool: true,
+            spar: true,
+        },
+        bookedTill: 1685000000000
     }, {
         title: 'delux room',
+        id: 'ROOM_3',
         type: 'holiday hotel vacation',
-        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        description: 'Experience a dreamy island getaway in the remote Maldives refuge of JA Manafaru. A tropical private paradise can be found in the crystal-clear waters of the Indian Ocean. It combines the peace and quiet of the Maldives with seven top-notch restaurants, a wide range of recreational activities, and exotic spa and wellness facilities. Magical moments are documented, and romance comes to life against a gorgeous landscape.',
         photos: [BGSlideFour],
         avaiability: {},
-        price: '231',
+        price: '674',
         term: 'night',
+        rating: [1, 5, 5, 5, 5, 5, 5, 5, 5],
         features: {
-
-        }
+            wifi: true,
+            bars: true,
+            atmMachine: true,
+            restaurant: true,
+            swimmingPool: true,
+            spar: true,
+        },
+        bookedTill: 1683576775423
     }, {
         title: 'delux room',
+        id: 'ROOM_4',
         type: 'holiday hotel vacation',
         description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-        photos: [BGSlideFive,BGSlideTwo, BGSlideFour],
+        photos: [BGSlideFive, BGSlideTwo, BGSlideFour],
         avaiability: {},
         price: '231',
         term: 'night',
+        rating: [2, 3, 3, 1, 1, 1, 1],
         features: {
-
-        }
+            wifi: true
+        },
+        bookedTill: 168357679999
+    }
+    , {
+        title: 'delux room',
+        id: 'ROOM_5',
+        type: 'holiday hotel vacation',
+        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+        photos: [BGSlideTwo, BGSlideFive, BGSlideFour],
+        avaiability: {},
+        price: '1231',
+        term: 'night',
+        rating: [2, 3, 3, 1, 1, 1, 1],
+        features: {
+            wifi: true
+        },
+        bookedTill: 1683576752312
     }
 ]

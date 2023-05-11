@@ -4,6 +4,7 @@ import { useLocalStorage } from 'usehooks-ts';
 import { AccomodationServices, IAccomodationServices } from '../Constants/Interfaces';
 import HomeLayout from "../Views/Layouts/Home";
 import GuestLayout from "../Views/Layouts/Guest";
+import Cart from "../Views/Components/Cart";
 
 export default function Root() {
     const [app, setApp] = useLocalStorage<IAccomodationServices>('@AccomodationServices', AccomodationServices)
@@ -26,8 +27,8 @@ export default function Root() {
 
     return (
         <BrowserRouter>
-
             {app?.user?.isAuthenticated ? Authenticated : Guest}
+            <Cart />
         </BrowserRouter >
     )
 }

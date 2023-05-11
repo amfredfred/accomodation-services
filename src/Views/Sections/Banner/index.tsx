@@ -34,39 +34,37 @@ export default function BannerArea() {
                     loop
                 >
                     {
-                        _dummy_?.map((room: IRoom) => {
-                            return (
-                                <SwiperSlide>
-                                    <div className="banner-bg-slide" >
-                                        <div className="banner-bg-image-wrapper">
-                                            <img src={room?.photos?.[0]} className="background-cover" />
-                                            {room?.photos?.map(photo => <motion.img
-                                                initial={{ opacity: 0, }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{ delay: .3, duration: .7 }}
-                                                loading='lazy'
-                                                className='banner-bg-img'
-                                                src={photo} alt="" />)
-                                            }
-                                        </div>
-                                        <div className="banner-bg-details">
-                                            <h2 className="headline-h2 capitalize padding-none margin-none">{room?.title}</h2>
-                                            <p className="sub-headline capitalize">{room?.type}</p>
-                                            <p className="paragraph">{room?.description}</p>
-                                            <div className="space-between">
-                                                <Wifi />
-                                            </div>
-                                            <hr className='hr-line' />
-                                            <span className="price-display">
-                                                ${room?.price}/{room?.term}
-                                            </span>
-                                            <Button variant='contained' className='primary-button'>
-                                                CHECK AVAIABILITY
-                                            </Button>
-                                        </div>
+                        _dummy_?.map((room: IRoom) => <SwiperSlide>
+                            <div className="banner-bg-slide" >
+                                <div className="banner-bg-image-wrapper">
+                                    <img src={room?.photos?.[0]} className="background-cover" />
+                                    {room?.photos?.map(photo => <motion.img
+                                        initial={{ opacity: 0, }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: .3, duration: .7 }}
+                                        loading='lazy'
+                                        className='banner-bg-img'
+                                        src={photo} alt="" />)
+                                    }
+                                </div>
+                                <div className="banner-bg-details">
+                                    <h2 className="headline-h2 capitalize padding-none margin-none">{room?.title}</h2>
+                                    <p className="sub-headline capitalize">{room?.type}</p>
+                                    <p className="paragraph">{room?.description}</p>
+                                    <div className="space-between">
+                                        <Wifi />
                                     </div>
-                                </SwiperSlide>)
-                        })
+                                    <hr className='hr-line' />
+                                    <span className="price-display">
+                                        ${room?.price}/{room?.term}
+                                    </span>
+                                    <Button variant='contained' className='primary-button'>
+                                        CHECK AVAIABILITY
+                                    </Button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        )
                     }
                     <SlideButtons />
                 </Swiper>

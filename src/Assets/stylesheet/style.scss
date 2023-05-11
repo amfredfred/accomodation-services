@@ -66,6 +66,48 @@
          margin: 0;
      }
 
+     .link-color {
+         color: var(--color-links) !important;
+         text-transform: capitalize;
+         font-size: 12px;
+     }
+
+     .no-border {
+         border: 0 !important;
+         border-bottom: 0 !important;
+         border-top: 0 !important;
+     }
+
+     .feature-icon {
+         padding: .4rem;
+         border-radius: 50px;
+         //  box-shadow: 0 0 1px inset white;
+         background: var(--body-background-color);
+         font-size: 34px;
+         cursor: pointer;
+     }
+
+     .date-picker {
+         color: white !important;
+
+         &>* {
+             color: whitesmoke !important;
+         }
+     }
+
+     .individual-counter {
+         margin-top: 1rem;
+     }
+
+     .body {
+         border-radius: 10px;
+         padding: 1.2rem .5rem;
+         background: var(--body-background-color);
+         display: flex;
+         align-content: center;
+         align-items: center;
+     }
+
      .floating-panel-top {
          position: absolute;
          left: 1rem;
@@ -91,7 +133,7 @@
 
      .price-display {
          font-size: 23px;
-         font-family: var(--font-family-monospace);
+         font-family: var(--font-roboto);
          text-transform: capitalize;
      }
 
@@ -238,34 +280,35 @@
                  justify-content: space-between;
 
                  .banner-bg-image-wrapper {
-                     display: flex; 
+                     display: flex;
                      padding: 1rem;
                      gap: 1rem;
 
-                     .background-cover{
-                        width: 100%;
-                        height: 1000px;
-                        z-index: -1;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        filter: blur(260px) grayscale(.4);
+                     .background-cover {
+                         width: 100%;
+                         height: 1000px;
+                         z-index: -1;
+                         position: absolute;
+                         left: 0;
+                         top: 0;
+                         filter: blur(260px) grayscale(.4);
                      }
 
                      .banner-bg-img {
                          object-fit: cover;
-                         height: 100%; 
+                         height: 100%;
                          -o-object-fit: cover;
                          max-width: 100%;
                          object-position: top;
                          flex-grow: 1;
-                         border-radius: 10px;  
+                         border-radius: 10px;
                      }
                  }
 
                  .banner-bg-details {
                      width: 630px;
                      position: fixed;
+                     max-width: 100%;
                      right: 4rem;
                      transform: translate(0, -50%);
                      top: 50%;
@@ -316,11 +359,78 @@
          .section-container.booking {
              padding: 1rem;
 
+             .booking-section {
+                 display: flex;
+                 flex-wrap: wrap;
+                 gap: 1rem;
+                 justify-content: space-between;
+                 align-items: flex-end;
+
+                 .rooms-display {
+                     width: 800px;
+                     max-width: 100%;
+                     flex-grow: 1;
+                     height: 500px;
+                     position: relative;
+                     border-radius: 20px;
+
+                     .card-img-wrapper {
+                         height: clamp(100%, 100%, 100%);
+                         width: 100%;
+                         justify-content: center;
+                         display: flex;
+
+                         .card-img {
+                             width: 100%;
+                             border-radius: 20px;
+                             object-fit: cover;
+                             object-position: center;
+                             -o-object-fit: cover;
+                             -o-object-position: center;
+                         }
+                     }
+
+                     .slider-button {
+                         font-size: 60px;
+                         background: var(--card-background-color);
+                         border-radius: 50px;
+                         padding: .4rem;
+                         cursor: pointer;
+                         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+                         transition: box-shadow 800ms;
+                         z-index: 3;
+                         position: absolute;
+                         left: 3rem;
+                         top: 50%;
+                         transform: translate(-50%, 0);
+
+                         &:hover {
+                             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+                         }
+
+                         &.next {
+                             left: auto;
+                             right: 0rem;
+                         }
+                     }
+                 }
+             }
+
              .booking-calendar-contaner {
-                 width: 100%;
+                 width: 400px;
+                 flex-grow: 1;
                  border-radius: 10px;
                  background: var(--box-background-color);
-                 height: 200px;
+                 padding: 1rem;
+                 max-height: max-content;
+                 position: sticky;
+                 position: -webkit-sticky;
+                 top: 0;
+
+                 .booking-vaiants {
+                     margin-block: 1rem;
+                     color: white;
+                 }
              }
          }
 
@@ -370,222 +480,261 @@
              }
 
          }
+
          //About
-         .section-container.about{
-            padding: 1rem;
+         .section-container.about {
+             padding: 1rem;
          }
      }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     //CART
+     .cart-wrapper {
+         width: 100dvw;
+         position: fixed;
+         transform: translate(-50%, -50%);
+         left: 50%;
+         top: 50%;
+         height: 100dvh;
+         display: flex;
+         background: rgb(33, 33, 33);
+
+         .cart-main {
+             margin: auto;
+             width: 800px;
+             height: max-content;
+             background: var(--body-background-color);
+             border-radius: 10px;
+             max-width: 100%;
+
+             .cart-contents {
+                 width: 100%;
+                 background: var(--card-background-color);
+                 border-radius: inherit;
+                 position: relative;
+                 isolation: isolate;
+                 max-height: 70dvh;
+                 overflow: auto;
+                 padding: 1rem;
+
+                 &::before {
+                     position: absolute;
+                     transform: translate(-50%, 0);
+                     content: '';
+                     left: 50%;
+                     border: solid 20px var(--box-background-color);
+                     border-radius: 100%;
+                     width: 300px;
+                     aspect-ratio: 1/1;
+                     top: -100px;
+                     z-index: -2;
+                 }
+
+                 &::after {
+                     position: absolute;
+                     content: '';
+                     left: 0;
+                     top: 0;
+                     border-radius: 100%;
+                     background: inherit;
+                     width: 100%;
+                     height: 100%;
+                     z-index: -1;
+                 }
+             }
+         }
+     }
+
+     .cart-icon {
+         padding: .7rem;
+         background: green;
+         border-radius: 50px;
+         z-index: 10;
+         position: fixed;
+         right: 2rem;
+         bottom: -2rem;
+         cursor: pointer;
+         transition: padding-bottom 700ms;
+
+         &:after {
+             position: absolute;
+             color: white;
+             padding: .1rem;
+             text-align: center;
+             background: red;
+             left: -.4rem;
+             top: -.4rem;
+             aspect-ratio: 1/1;
+             width: 24px;
+             display: flex;
+             font-size: 13px;
+             justify-content: center;
+             align-items: center;
+             border-radius: 50px;
+             content: attr(data-cart-item-count);
+         }
+
+         &:hover {
+             padding-bottom: 3rem !important;
+         }
+     }
+
+     @media screen and (max-width: 600px) {
+         .cart-wrapper {
+             .cart-main {
+                 height: 100%;
+
+                 .cart-contents {
+                     //  background: var(--body-background-color);
+                     height: 100%;
+                     max-height: max-content;
+                     padding: .5rem;
+
+                     &::after,
+                     &::before {
+                         display: none;
+                     }
+                 }
+             }
+         }
+
+         .page-content {
+             .banner-bg-slides {
+                 .banner-bg-slide {
+                     flex-wrap: wrap;
+                     position: relative;
+                     //  height: auto;
+
+                     .banner-bg-image-wrapper {
+                         padding: 0;
+
+                         width: 100%;
+
+                         .background-cover {
+                             width: 100%;
+                             height: 1000px;
+                             z-index: -1;
+                             position: absolute;
+                             left: 0;
+                             top: 0;
+                             filter: blur(260px) grayscale(.4);
+                         }
+
+                         .banner-bg-img {
+                             object-fit: fill;
+                             height: 55dvh;
+                             -o-object-fit: fill;
+                             max-width: 100%;
+                             object-position: top;
+                             flex-grow: 1;
+                             border-radius: 0;
+                         }
+                     }
+
+                     .banner-bg-details {
+                         position: absolute;
+                         flex-grow: 1;
+                         background: transparent;
+                         border-radius: 0;
+                         right: 0;
+                         bottom: 0;
+                         height: max-content;
+                         padding: 1rem;
+                         transform: none;
+                         top: auto;
+                         border-top-right-radius: 20px;
+                         border-top-left-radius: 20px;
+
+
+                         .sub-headline {
+                             display: none;
+                         }
+
+                         .paragraph {
+                             overflow: hidden;
+                             text-overflow: ellipsis;
+                             white-space: nowrap;
+                         }
+                     }
+                 }
+
+                 .banner-area-swiper {
+                     width: 100%;
+                     height: 100%;
+                     max-width: 100%;
+
+                     .slider-buttons {
+                         right: 0;
+                         padding-inline: 1rem;
+                         bottom: 1rem;
+                         width: 160px;
+                         bottom: 4rem;
+                         z-index: 3;
+
+                         .slider-button {
+                             font-size: 40px;
+                             border-radius: 50px;
+                             padding: .2rem;
+                             box-shadow: none;
+
+                         }
+                     }
+                 }
+             }
+
+             .section-container.booking {
+                 padding: 0;
+                 min-height: max-content;
+
+                 .h2-headline {
+                     padding-inline: 1rem;
+                 }
+
+                 .paragraph {
+                     padding-inline: 1rem;
+                 }
+
+                 .booking-section {
+                     flex-wrap: wrap;
+                     gap: 0;
+                     justify-content: space-between;
+
+                     .rooms-display {
+                         padding: 0;
+                         height: max-content;
+                         border-radius: 0;
+
+                         .card-img-wrapper {
+                             height: max-content;
+                             gap: 0;
+                             height: 55dvh;
+
+                             .card-img {
+                                 width: 100%;
+                                 height: 100%;
+                                 border-radius: 0;
+                                 object-fit: fill;
+                                 -o-object-fit: fill;
+                                 border-top-left-radius: 20px;
+                                 border-top-right-radius: 20px;
+                             }
+                         }
+                     }
+                 }
+
+                 .booking-calendar-contaner {
+                     margin-top: -20px;
+                     z-index: 5;
+                     background: linear-gradient(-45deg, transparent, var(--box-background-color), var(--box-background-color));
+
+                     .paragraph {
+                         //  overflow: hidden;
+                         //  text-overflow: ellipsis;
+                         //  white-space: nowrap;
+                         padding-inline: 0;
+                     }
+                 }
+             }
+         }
+     }
 
  }
