@@ -12,7 +12,7 @@ export default function Root() {
     const Authenticated = (
         <HomeLayout>
             <Routes>
-                <Route path="" element={<Welcome />} />
+                <Route path="/" element={<Welcome />} />
             </Routes>
         </HomeLayout>
     )
@@ -20,7 +20,7 @@ export default function Root() {
     const Guest = (
         <GuestLayout>
             <Routes>
-                <Route path="" element={<Welcome />} />
+                <Route path="/" element={<Welcome />} />
             </Routes>
         </GuestLayout>
     )
