@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/amfredfred/accomodation-services.git/static/css/main.05b94f16.css",
-    "main.js": "/amfredfred/accomodation-services.git/static/js/main.4dd17c71.js",
-    "static/media/florian-giorgio-mbB_e6M1Zso-unsplash.jpg": "/amfredfred/accomodation-services.git/static/media/florian-giorgio-mbB_e6M1Zso-unsplash.8844c794d62ff3830e26.jpg",
-    "static/media/bg-slider-2.jpg": "/amfredfred/accomodation-services.git/static/media/bg-slider-2.6baa578e3e5d16da94e5.jpg",
-    "static/media/slide-1.jpg": "/amfredfred/accomodation-services.git/static/media/slide-1.48cc37e972c37825acbe.jpg",
-    "static/media/gallery-about-1.png": "/amfredfred/accomodation-services.git/static/media/gallery-about-1.eef9510b1335db069d97.png",
-    "static/media/hotel-one.webp": "/amfredfred/accomodation-services.git/static/media/hotel-one.8ca8086b86db077249cf.webp",
-    "static/media/vista.webp": "/amfredfred/accomodation-services.git/static/media/vista.2e35900687b4d909892b.webp",
-    "static/media/exterior.jpg": "/amfredfred/accomodation-services.git/static/media/exterior.4ca3e6473977b366c782.jpg",
-    "static/media/aprtment-one.webp": "/amfredfred/accomodation-services.git/static/media/aprtment-one.2605c8d68184decc8287.webp",
-    "static/media/new-aprtment.webp": "/amfredfred/accomodation-services.git/static/media/new-aprtment.e198a8e4caf2834c4615.webp",
-    "static/media/motel-port.webp": "/amfredfred/accomodation-services.git/static/media/motel-port.8a6bfe5dbe3ed97af42b.webp",
-    "index.html": "/amfredfred/accomodation-services.git/index.html",
-    "main.05b94f16.css.map": "/amfredfred/accomodation-services.git/static/css/main.05b94f16.css.map",
-    "main.4dd17c71.js.map": "/amfredfred/accomodation-services.git/static/js/main.4dd17c71.js.map"
+    "main.css": "/accomodation-services/static/css/main.05b94f16.css",
+    "main.js": "/accomodation-services/static/js/main.ddbefcb0.js",
+    "static/media/florian-giorgio-mbB_e6M1Zso-unsplash.jpg": "/accomodation-services/static/media/florian-giorgio-mbB_e6M1Zso-unsplash.8844c794d62ff3830e26.jpg",
+    "static/media/bg-slider-2.jpg": "/accomodation-services/static/media/bg-slider-2.6baa578e3e5d16da94e5.jpg",
+    "static/media/slide-1.jpg": "/accomodation-services/static/media/slide-1.48cc37e972c37825acbe.jpg",
+    "static/media/gallery-about-1.png": "/accomodation-services/static/media/gallery-about-1.eef9510b1335db069d97.png",
+    "static/media/hotel-one.webp": "/accomodation-services/static/media/hotel-one.8ca8086b86db077249cf.webp",
+    "static/media/vista.webp": "/accomodation-services/static/media/vista.2e35900687b4d909892b.webp",
+    "static/media/exterior.jpg": "/accomodation-services/static/media/exterior.4ca3e6473977b366c782.jpg",
+    "static/media/aprtment-one.webp": "/accomodation-services/static/media/aprtment-one.2605c8d68184decc8287.webp",
+    "static/media/new-aprtment.webp": "/accomodation-services/static/media/new-aprtment.e198a8e4caf2834c4615.webp",
+    "static/media/motel-port.webp": "/accomodation-services/static/media/motel-port.8a6bfe5dbe3ed97af42b.webp",
+    "index.html": "/accomodation-services/index.html",
+    "main.05b94f16.css.map": "/accomodation-services/static/css/main.05b94f16.css.map",
+    "main.ddbefcb0.js.map": "/accomodation-services/static/js/main.ddbefcb0.js.map"
   },
   "entrypoints": [
     "static/css/main.05b94f16.css",
-    "static/js/main.4dd17c71.js"
+    "static/js/main.ddbefcb0.js"
   ]
 }
